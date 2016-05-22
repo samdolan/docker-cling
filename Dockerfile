@@ -11,7 +11,8 @@ RUN apt-get update && \
     cmake \
     wget
 
-RUN wget https://raw.githubusercontent.com/karies/cling-all-in-one/master/clone.sh /tmp/clone.sh
+RUN wget -O /tmp/clone.sh https://raw.githubusercontent.com/karies/cling-all-in-one/master/clone.sh 
+
 RUN CMAKE_CXX_COMPILER=CXX bash /tmp/clone.sh
 
 ENTRYPOINT ["cling"]
