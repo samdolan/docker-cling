@@ -15,5 +15,7 @@ RUN wget -O /tmp/clone.sh https://raw.githubusercontent.com/karies/cling-all-in-
 
 RUN CMAKE_CXX_COMPILER=CXX bash /tmp/clone.sh
 
+RUN rm -R /tmp/* 
+
 ENTRYPOINT ["cling"]
 
